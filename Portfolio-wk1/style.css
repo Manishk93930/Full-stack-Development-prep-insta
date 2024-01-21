@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Dancing+Script:wght@600&family=Heebo:wght@300;400&family=Noto+Sans+TC:wght@300;400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap');
+
+body{
+    background: linear-gradient(to right,#03befc,#fc0398 );
+}
+.header{
+    display: flex;
+}
+.intro .ms{
+    font-family:'Dancing Script', cursive ;
+}
+.header .image img{
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+}
+.acheivements ul li{
+    padding-top: 5px;
+}
+table,th,td{
+    padding: 5px;
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+}

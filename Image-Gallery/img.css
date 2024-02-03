@@ -19,6 +19,7 @@
 
 .gallery{
     height: 50vh;
+    width: 50%;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); 

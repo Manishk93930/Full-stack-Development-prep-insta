@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height:100vh ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+
+}
+
+.gallery{
+    height: 50vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); 
+    /*Setting width of each column is auto ,minimum width 
+    is 250 px maximum is 1frame(device width), Here if there is 500px +padding pixel is available it goes with 
+    two column otherwise i gives one column and takes whole width eventhough it is 490 px is available in width*/
+    grid-gap: 30px; 
+    border: solid 2px grey;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px 5px grey;
+    transition: 2s;
+
+}
+
+.gallery img{
+     width: 100%; /* Game Changer */
+     
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    margin-top: -50px;
+    font-size: 2em;
+    color: #fff;
+    background: blue;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.arrow:hover{
+    box-shadow: 0 0 3px 3px lightblue;
+    transition: .2s;
+}
+.active{
+    height: 100vh;
+    transition: 2s;
+    overflow: scroll;
+}
+
+.upload{
+    padding: 10px 80px;
+    background:#3366cc;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.upload:hover{
+    box-shadow: 0 0 5px 2px #3366cc;
+    transition: .2s;
+}
+
+.file-input{
+    display: none;
+}

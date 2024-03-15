@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin-top: 3%;
+}
+
+.top{
+    margin-left: 45%;
+    width: 200px;
+    padding: 0;
+}
+
+.selection{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.selection a{
+    text-decoration: none;
+    font-size: .7rem;
+    padding: 8px;
+    border: 1.5px solid darkblue;
+    border-radius: 4px;
+    background: darkblue;
+    color: #fff;
+}
+.upload{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 4%;
+    width: 50vw;
+    padding: 10px;
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.upload .c1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.upload .submit{
+    margin-top: 20px;
+    margin-left: 25%;
+    padding: 5px;
+    background-color: greenyellow;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+
+}
+
+.upload textarea{
+    padding: 10px;
+}
+
+.upload{
+    display: none;
+}
+
+.retrieve{
+    margin-left: 30%;
+    margin-top: 20px;
+    display: flex;
+    gap: 4%;
+    width: 40vw;
+}
+
+.retrieve input{
+    padding: 5px;
+}
+
+.retrieve{
+    display: none;
+}
+
+.retrieve button{
+    margin-top: 4%;
+    padding: 10px;
+    background: darkblue;
+    color: #fff;
+    border: 1px solid darkblue;
+    border-radius: 4px;
+    cursor: pointer;
+}

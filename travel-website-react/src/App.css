@@ -1,0 +1,200 @@
+App.css
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* App container */
+.App {
+  text-align: center;
+}
+
+/* Header styles */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.header li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header a:hover {
+  color: #ccc;
+}
+
+.header-nav{
+     display: flex;
+     gap: 10%;
+     justify-content: center;
+     list-style: none;
+}
+
+.header-nav li a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+.header-nav li a:hover{
+  color: rgb(65, 172, 49);
+}
+
+/* Hero section styles */
+.hero-content{
+  background-image: url('/public/images/kashmir.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+/* Destinations section styles */
+.destinations-section {
+  padding: 5rem 0;
+}
+
+.destinations-section h3 {
+  font-size: 1.5rem;
+}
+
+.destinations-section .destination-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.destinations-section .destination-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.destinations{
+  display: flex;
+  flex-direction: column;
+}
+.destinations .destination {
+  display: flex;
+  gap: 5%;
+  margin-top: 50px;
+}
+
+.destinations .destination img{
+  border-radius: 5px;
+}
+/* Contact form styles */
+.contact-form {
+  padding: 5rem 0;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.contact .con-con{
+  display: flex;
+  gap: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.contact .con-con p{
+  width: 70%;
+  font-size: 1.2rem;
+}
+.contact h2{
+  color: darkblue;
+}
+
+.contact form{
+  width: 30vw;
+  padding: 20px;
+  border: 1.5px solid blue;
+  border-radius: 4px;
+}
+.contact .form-group{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact .message{
+  margin-left: -12px;
+}
+
+.contact .message textarea{
+  padding: 5px;
+}
+.contact .form-group input{
+  padding: 5px;
+}
+.contact form .submit{
+  padding: 10px;
+  background-color: green;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+.contact form .submit:hover{
+  background-color: rgb(145, 194, 72);
+}
+/* Footer styles */
+.footer-content .social-icons{
+  display: flex;
+  justify-content: center;
+  gap: 7%;
+}
+
+.footer-content .social-icons .fa-facebook{
+  color: blue;
+}
+
+.footer-content .social-icons .fa-twitter{
+  color: rgb(22, 119, 119);
+}
+
+.footer-content .social-icons .fa-instagram{
+  color:#dd2a7b;
+}

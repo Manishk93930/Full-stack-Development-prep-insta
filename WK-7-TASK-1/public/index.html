@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Syllabus</title>
+    <!-- Include CSS file -->
+    <link rel="stylesheet" href="db.css">
+</head>
+<body>
+    <h1 class="top">Course Details</h1>
+    <div class="selection">
+        <!-- Add event listeners to show/hide upload and retrieve sections -->
+        <a href="#" onclick="showUpload(event)"><h1>Upload Data</h1></a>
+        <a href="#" onclick="showRetrieve(event)"><h1>Retrieve Data</h1></a>
+    </div>
+    <div class="upload" style="display: none;">
+        <!-- Form for uploading data -->
+        <form id="uploadForm" action="/uploadData" method="post">
+            <div class="c1">
+                <!-- Input field for Course ID -->
+                <div class="course">
+                    <label for="courseid">Course ID</label>
+                    <input type="text" id="courseid" name="courseId">
+                </div>
+                <!-- Input field for Due Date -->
+                <div class="duedate">
+                    <label for="due">Due Date</label>
+                    <input type="text" id="due" name="dueDate">
+                </div>
+            </div>
+            <!-- Input field for Task Name -->
+            <label for="tskname">Task Name</label>
+            <input type="text" id="tskname" name="taskName">
+            <!-- Textarea for Additional Details -->
+            <label for="adddet">Additional Details</label>
+            <textarea name="additionalDetails" id="adddet" cols="30" rows="10" placeholder="Enter additional information about the course"></textarea>
+            <!-- Submit button -->
+            <button type="submit" class="submit">Submit</button>
+        </form>
+        <!-- Status message div -->
+        <div id="uploadStatus"></div>
+    </div>
+    <div class="retrieve" style="display: none;">
+        <!-- Form for retrieving data -->
+        <form id="retrieveForm" action="/retrieveData" method="get">
+            <label for="retrieveid"><h2>Course ID</h2></label>
+            <input type="text" id="retrieveid" name="courseId">
+            <!-- Button to trigger data retrieval -->
+            <button type="submit" onclick="retrieveData()">RETRIEVE</button>
+        </form>
+    </div> 
+    <!-- Container for retrieved data -->
+    <div id="retrieveData"></div>
+    <!-- Include JavaScript files -->
+    <script src="db.js"></script>
+    <!-- Note: server.js is not required in the HTML file -->
+</body>
+</html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,3 +93,99 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Cities</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #cities-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 800px;
+        }
+
+        .city-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div id="cities-container"></div>
+
+<script>
+    // Fetch data from the provided API
+    fetch('https://api.npoint.io/7bbd3a59c401f616bb89')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Check if the data includes a "places" array
+            const places = data.places || [];
+
+            // Check if there are any places to display
+            if (places.length === 0) {
+                console.warn('No places found in the data');
+                return;
+            }
+
+            // Create HTML elements dynamically for each place
+            const citiesContainer = document.getElementById('cities-container');
+
+            places.forEach(place => {
+                const cityCard = document.createElement('div');
+                cityCard.classList.add('city-card');
+
+                const cityName = document.createElement('h2');
+                cityName.textContent = place.name || 'Unknown';
+
+                const cityDetails = document.createElement('p');
+                cityDetails.textContent = place.info || 'Details not available';
+
+                cityCard.appendChild(cityName);
+                cityCard.appendChild(cityDetails);
+
+                citiesContainer.appendChild(cityCard);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching or processing data:', error.message);
+        });
+</script>
+
+</body>
+</html>
+>>>>>>> b732338569d054f91e9973d8fedcc7e63f0f41f4
